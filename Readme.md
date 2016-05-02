@@ -17,7 +17,7 @@ This code just implementation multi auth feature Laravel 5.2
 
  
 
-1.  Next, edit config/database.php, If you use mysql change your database name
+2.  Next, edit config/database.php, If you use mysql change your database name
     like in .env
 
 `'mysql' => [`
@@ -48,13 +48,13 @@ This code just implementation multi auth feature Laravel 5.2
 
  
 
-1.  Create Auth Scaffolding
+3.  Create Auth Scaffolding
 
 `php artisan make:auth`
 
  
 
-1.  After finish create scaffolding, edit file config/auth.php
+4.  After finish create scaffolding, edit file config/auth.php
 
     `'defaults' => [`
 
@@ -138,7 +138,7 @@ This code just implementation multi auth feature Laravel 5.2
 
  
 
-1.  Edit file kernel.php on folder app\\Http to add admin on middlewareGroup
+5.  Edit file kernel.php on folder app\\Http to add admin on middlewareGroup
 
     `protected $middlewareGroups = [`
 
@@ -186,7 +186,7 @@ This code just implementation multi auth feature Laravel 5.2
 
  
 
-1.  Before next step, create table users with migrations commands
+6.  Before next step, create table users with migrations commands
 
 `php artisan migrate`
 
@@ -196,14 +196,14 @@ and you just type commands syntax in Terminal or Command Prompt
 
  
 
-1.  Now we have table users next create table admins and model Admin with
+7.  Now we have table users next create table admins and model Admin with
     commands
 
 `php artisan make:models Admin -m`
 
  
 
-1.  Edit file create\_admins\_table.php on folder database/migrations
+8.  Edit file create\_admins\_table.php on folder database/migrations
 
     `public function up()`
 
@@ -249,13 +249,13 @@ and you just type commands syntax in Terminal or Command Prompt
 
  
 
-1.  Now, migrate file create\_admins\_table for create table admin on database
+9.  Now, migrate file create\_admins\_table for create table admin on database
 
 `php artisan migrate`
 
  
 
-1.  Create file seeds for table users and admins
+10.  Create file seeds for table users and admins
 
 `php artisan make:seeds AdminTableSeeder`
 
@@ -263,7 +263,7 @@ and you just type commands syntax in Terminal or Command Prompt
 
  
 
-1.  Edit file seeds AdminTableSeeder and UserTableSeeder
+11.  Edit file seeds AdminTableSeeder and UserTableSeeder
 
 *AdminTableSeeder.php*
 
@@ -311,7 +311,7 @@ and you just type commands syntax in Terminal or Command Prompt
 
  
 
-1.  Edit file DatabaseSeeder.php on folder database/seed to insert
+12.  Edit file DatabaseSeeder.php on folder database/seed to insert
     AdminTableSeeder and UserTableSeeder into your database
 
     `public function run()`
@@ -328,7 +328,7 @@ and you just type commands syntax in Terminal or Command Prompt
 
  
 
-1.  To inserting data from AdminTableSeeder and UserTableSeeder to database
+13.  To inserting data from AdminTableSeeder and UserTableSeeder to database
     table admins and user, use DatabaseSeeder.php now type command seeder on
     Terminal or Command Prompt
 
@@ -336,7 +336,7 @@ and you just type commands syntax in Terminal or Command Prompt
 
  
 
-1.  Next, edit file Admin.php on folder app/ (this file Admin.php content like
+14.  Next, edit file Admin.php on folder app/ (this file Admin.php content like
     on file User.php just copying content User.php)
 
     `<?php`
@@ -395,13 +395,13 @@ and you just type commands syntax in Terminal or Command Prompt
 
  
 
-1.  Create Controller AdminController with command
+15.  Create Controller AdminController with command
 
 `php artisan make:controller AdminController`
 
  
 
-1.  Edit file AdminController.php on folder app\\http\\Controllers
+16.  Edit file AdminController.php on folder app\\http\\Controllers
 
     `<?php`
 
@@ -520,13 +520,13 @@ and you just type commands syntax in Terminal or Command Prompt
 
  
 
-1.  Create Controller LoginController with same commands on before steps
+17.  Create Controller LoginController with same commands on before steps
 
 `php artisan make:controller LoginController`
 
  
 
-1.  Edit file LoginController on app\\Http\\Controllers
+18.  Edit file LoginController on app\\Http\\Controllers
 
     `<?php`
 
@@ -631,7 +631,7 @@ and you just type commands syntax in Terminal or Command Prompt
 
  
 
-1.  Last Step, edit routes.php on folder app\\Http
+19.  Last Step, edit routes.php on folder app\\Http
 
     `<?php`
 
