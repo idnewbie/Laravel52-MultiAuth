@@ -715,4 +715,4 @@ Sorry if my english so bad
 
  
 
-Thanks Ad
+_Thanks Adhitya Putra_
