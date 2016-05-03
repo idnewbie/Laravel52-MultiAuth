@@ -251,9 +251,9 @@ nb : if you use feature auth scaffolding you have user table on folder database/
 
 -   Create file seeds for table users and admins
 
-`php artisan make:seeds AdminTableSeeder`
+`php artisan make:seeder AdminTableSeeder`
 
-`php artisan make:seed UserTableSeeder`
+`php artisan make:seeder UserTableSeeder`
 
  
 
